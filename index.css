@@ -1,0 +1,16 @@
+*{
+    
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif ;
+}
+
+.card{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+grid-gap: 20px;
+}
+.card-item{
+    background-color: rgb(201, 201, 244);
+}
