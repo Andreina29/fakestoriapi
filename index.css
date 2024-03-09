@@ -9,8 +9,35 @@
 .card{
     display: grid;
     grid-template-columns: repeat(7, 1fr);
-grid-gap: 20px;
+    grid-gap: 20px;
+    color: rgb(200, 232, 232)#ffff;
 }
 .card-item{
-    background-color: rgb(201, 201, 244);
+    background: linear-gradient(45deg, #5c4d42, #f7f7f7);
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    
+}
+.cabecera{
+    background-color: rgb(167 173 187);
+    height: 125px;
+    margin-bottom: 100px;
+}
+img{
+    height: 150px;
+    width: 150px;
+    border-radius: 1000px;
+    object-fit: auto; 
+    position: absolute;
+    right: calc(50% - 75px);
+    top: calc(50% - 135px);
+    
+}
+p, label{
+    padding: 3px 20px; 
+    font-weight: 600;
+}
+.titulo{
+    font-weight: 400;
 }
