@@ -8,36 +8,57 @@
 
 .card{
     display: grid;
-    grid-template-columns: repeat(7, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     grid-gap: 20px;
-    color: rgb(200, 232, 232)#ffff;
+    color: rgb(208, 241, 241)#ffff;
 }
 .card-item{
-    background: linear-gradient(45deg, #5c4d42, #f7f7f7);
+    background: linear-gradient(45deg, #faede4, #e03b3b);
     border-radius: 10px;
     overflow: hidden;
     position: relative;
+    padding-bottom: 30px;
     
 }
 .cabecera{
-    background-color: rgb(167 173 187);
+    background-color: rgb(239, 239, 108);
     height: 125px;
     margin-bottom: 100px;
 }
 img{
+    height: 100%;
+    width: 150px;
+    object-fit: contain;
+    padding: 10px;
+    
+}
+.cont-img{
     height: 150px;
     width: 150px;
     border-radius: 1000px;
-    object-fit: auto; 
     position: absolute;
     right: calc(50% - 75px);
     top: calc(50% - 135px);
-    
+    background-color: rgb(255, 254, 254);
+    display: flex;
+    overflow: hidden;
 }
+
 p, label{
     padding: 3px 20px; 
     font-weight: 600;
 }
 .titulo{
     font-weight: 400;
+   max-width: 300px;
+   overflow: hidden;
+   text-overflow: ellipsis;
+   white-space: nowrap ;
+}
+.categoria{
+    background-color: rgb(219, 212, 212);
+    border-radius: 20px;
+    color: #888484;
+    font-weight: 400;
+    margin-left: 15px;
 }
