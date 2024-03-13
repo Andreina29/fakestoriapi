@@ -11,9 +11,10 @@
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     grid-gap: 20px;
     color: rgb(208, 241, 241)#ffff;
+    margin: 50px;
 }
 .card-item{
-    background: linear-gradient(45deg, #faede4, #e03b3b);
+    background: linear-gradient(45deg, #faede4, #fac1ce);
     border-radius: 10px;
     overflow: hidden;
     position: relative;
@@ -42,6 +43,7 @@ img{
     background-color: rgb(255, 254, 254);
     display: flex;
     overflow: hidden;
+    
 }
 
 p, label{
@@ -56,9 +58,14 @@ p, label{
    white-space: nowrap ;
 }
 .categoria{
-    background-color: rgb(219, 212, 212);
+    background-color: rgb(175, 151, 151);
     border-radius: 20px;
-    color: #888484;
+    color: #494b58;
     font-weight: 400;
     margin-left: 15px;
+}
+.precio-sd{
+    font-size: 12px;
+    color: black;
+    text-decoration: line-through;
 }
