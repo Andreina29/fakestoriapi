@@ -23,7 +23,6 @@ function getData(){
              let precio = data[i].price
 
              let bloqueHtml =
-
              `
              <div class='card-item'>
              <div class='cabecera' style="background:rgb(${r} ${g} ${b} );" ></div>
@@ -35,6 +34,7 @@ function getData(){
              <p class= 'titulo'> ${data[i].title}</p>
              <p>$${precio} <span class= 'precio-sd'> $${((precio * 0.1) + precio). toFixed(2) }</span></p>
              <label class='categoria'>${data[i].category}</label>
+             
              </div>
 
              `;
@@ -43,6 +43,7 @@ function getData(){
              
              tabla += bloqueHtml;
         }
+
         tabla +="</div>";
         productos.innerHTML = tabla;
     })

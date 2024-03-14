@@ -14,7 +14,7 @@
     margin: 50px;
 }
 .card-item{
-    background: linear-gradient(45deg, #faede4, #fac1ce);
+    background: linear-gradient(45deg, #faede4, #f4d3f9);
     border-radius: 10px;
     overflow: hidden;
     position: relative;
@@ -69,3 +69,4 @@ p, label{
     color: black;
     text-decoration: line-through;
 }
+
