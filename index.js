@@ -34,7 +34,7 @@ function getData(){
              <p class= 'titulo'> ${data[i].title}</p>
              <p>$${precio} <span class= 'precio-sd'> $${((precio * 0.1) + precio). toFixed(2) }</span></p>
              <label class='categoria'>${data[i].category}</label>
-             
+             <button onclick="addToCart(${data[i].id})">Add to Cart</button>
              </div>
 
              `;
@@ -49,5 +49,17 @@ function getData(){
     })
     
 }
+let listaCard = []
+function addToCart(id){
+
+    listaCard.includes(2)
+    listaCard.push(id)
+    for(let i=0; i < listaCard.length; i++){
+        console.log("lista Card: ", listaCard[i])
+
+    }
+    console.log(listaCard)
+    
+} 
 
 getData();
