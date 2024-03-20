@@ -1,37 +1,35 @@
 *{
-    
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: sans-serif ;
+    font-family: sans-serif;
 }
 
 .card{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     grid-gap: 20px;
-    color: rgb(208, 241, 241)#ffff;
+    color: #ffffff;
     margin: 50px;
 }
+
 .card-item{
-    background: linear-gradient(45deg, #faede4, #f4d3f9);
+    background: linear-gradient(0deg, #162525, #1d1d1d);
     border-radius: 10px;
     overflow: hidden;
     position: relative;
     padding-bottom: 30px;
-    
 }
 .cabecera{
-    background-color: rgb(239, 239, 108);
+    background: #46979f;
     height: 125px;
-    margin-bottom: 100px;
+    margin-bottom: 75px;
 }
 img{
     height: 100%;
     width: 150px;
     object-fit: contain;
-    padding: 10px;
-    
+    padding: 10px;   
 }
 .cont-img{
     height: 150px;
@@ -39,39 +37,97 @@ img{
     border-radius: 1000px;
     position: absolute;
     right: calc(50% - 75px);
-    top: calc(50% - 135px);
-    background-color: rgb(255, 254, 254);
+    top: calc(50% - 125px);
+    background-color: rgb(255, 255, 255);
     display: flex;
     overflow: hidden;
-    
 }
-
 p, label{
-    padding: 3px 20px; 
+    padding: 3px 20px;
     font-weight: 600;
 }
 .titulo{
     font-weight: 400;
-   max-width: 300px;
-   overflow: hidden;
-   text-overflow: ellipsis;
-   white-space: nowrap ;
+    max-width: 300px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap ;
 }
+
 .categoria{
-    background-color: rgb(175, 151, 151);
+    background-color:#343333bd;
     border-radius: 20px;
-    color: #494b58;
+    color: #6fca8e;
     font-weight: 400;
     margin-left: 15px;
 }
+
 .precio-sd{
     font-size: 12px;
-    color: black;
+    color: #a0a0a0;
     text-decoration: line-through;
 }
 
+.btn-agregar {
+    display: block;
+    width: 100%;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 0;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
 
+.btn-agregar:hover {
+    background-color: #0056b3;
+}
 
+#carrito {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    z-index: 1000;
+    display: none;
+}
 
+#carrito.abierto {
+    display: block;
+}
 
+#lista-carrito {
+    list-style: none;
+    padding: 0;
+    max-height: 200px; /* Ajusta la altura máxima para hacer que el menú sea desplegable */
+    overflow-y: auto; /* Agrega desplazamiento vertical cuando la lista es demasiado larga */
+}
 
+#lista-carrito li {
+    margin-bottom: 5px;
+    padding: 5px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#lista-carrito img {
+    width: 50px; /* Ajusta el tamaño de la imagen */
+    height: 50px;
+    object-fit: contain;
+    margin-right: 10px; /* Ajusta el margen entre la imagen y el texto */
+}
+
+.abierto {
+    display: block !important; /* Asegura que el menú esté visible cuando tiene la clase 'abierto' */
+}
+#boton-carrito {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 1001; /* Asegura que el botón esté por encima del menú del carrito */
+}
