@@ -70,7 +70,7 @@ p, label{
 
 .btn-agregar {
     display: block;
-    width: 100%;
+    width: 75%;
     background-color: #007bff;
     color: #fff;
     border: none;
@@ -78,6 +78,9 @@ p, label{
     padding: 10px 0;
     cursor: pointer;
     transition: background-color 0.3s;
+    margin-top: 10px; /* Espacio entre el botón y el contenido superior del card */
+    margin-left: auto; /* Centrar el botón horizontalmente */
+    margin-right: auto;
 }
 
 .btn-agregar:hover {
@@ -85,49 +88,134 @@ p, label{
 }
 
 #carrito {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    background-color: #fff;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 10px;
-    z-index: 1000;
-    display: none;
+    position: fixed; /* Posición fija */
+    top: 20px; /* Distancia desde la parte superior */
+    right: 20px; /* Distancia desde la derecha */
+    background-color: #fff; /* Color de fondo */
+    border-radius: 5px; /* Borde redondeado */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra */
+    padding: 20px; /* Espacio interno */
+    z-index: 1000; /* Capa superior */
+    display: none; /* Ocultar inicialmente */
+    max-width: 300px; /* Ancho máximo */
 }
+#carrito h2 {
+    margin-bottom: 10px; /* Margen inferior */
+    font-size: 18px; /* Tamaño de fuente */
+}
+
 
 #carrito.abierto {
     display: block;
 }
 
 #lista-carrito {
-    list-style: none;
-    padding: 0;
-    max-height: 200px; /* Ajusta la altura máxima para hacer que el menú sea desplegable */
-    overflow-y: auto; /* Agrega desplazamiento vertical cuando la lista es demasiado larga */
+    list-style: none; /* Sin viñetas */
+    padding: 0; /* Sin relleno */
+    max-height: 200px; /* Altura máxima */
+    overflow-y: auto; /* Desplazamiento vertical */
 }
 
 #lista-carrito li {
-    margin-bottom: 5px;
-    padding: 5px;
-    background-color: #fff;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px; /* Margen inferior */
+    padding: 10px; /* Espacio interno */
+    background-color: #f9f9f9; /* Color de fondo */
+    border-radius: 5px; /* Borde redondeado */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra */
 }
 
 #lista-carrito img {
-    width: 50px; /* Ajusta el tamaño de la imagen */
-    height: 50px;
-    object-fit: contain;
-    margin-right: 10px; /* Ajusta el margen entre la imagen y el texto */
+    width: 50px; /* Ancho de imagen */
+    height: 50px; /* Altura de imagen */
+    object-fit: contain; /* Ajustar imagen */
+    margin-right: 10px; /* Margen derecho */
+}
+#subtotal, #impuestos, #total {
+    margin-top: 10px; /* Margen superior */
+    font-weight: bold; /* Negrita */
 }
 
 .abierto {
     display: block !important; /* Asegura que el menú esté visible cuando tiene la clase 'abierto' */
 }
 #boton-carrito {
-    position: fixed;
-    top: 10px;
-    right: 10px;
-    z-index: 1001; /* Asegura que el botón esté por encima del menú del carrito */
+    background-color: #007bff; /* Color de fondo */
+    color: #fff; /* Color del texto */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Borde redondeado */
+    padding: 10px 20px; /* Espacio interno */
+    cursor: pointer; /* Cursor al pasar por encima */
+    transition: background-color 0.3s; /* Transición suave */
+    position: fixed; /* Posición fija */
+    top: 10px; /* Distancia desde la parte superior */
+    right: 10px; /* Distancia desde la derecha */
+    z-index: 1001; /* Capa superior */
+}
+.btn-eliminar {
+    background-color: #dc3545; /* Color de fondo */
+    color: #fff; /* Color del texto */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Borde redondeado */
+    padding: 5px 10px; /* Espacio interno */
+    cursor: pointer; /* Cursor al pasar por encima */
+    transition: background-color 0.3s; /* Transición suave */
+    float: right; /* Hacer flotar el botón a la derecha */
+    margin-left: 10px; /* Margen izquierdo */
+}
+
+.btn-eliminar:hover {
+    background-color: #c82333; /* Color de fondo al pasar por encima */
+}
+#boton-carrito:hover {
+    background-color: #0056b3; /* Color de fondo al pasar por encima */
+}
+.clear {
+    clear: both; /* Limpiar flotantes */
+}
+.lista-carrito li {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.lista-carrito li span,
+.lista-carrito li select,
+.lista-carrito li button {
+    margin-bottom: 5px;
+}
+
+.lista-carrito li button {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.lista-carrito li button:hover {
+    background-color: #c82333;
+}
+
+.lista-carrito li select {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f8f9fa;
+    width: 100px;
+}
+.bloquear-scroll {
+    overflow: hidden;
+}
+
+body {
+    background-image: url('https://www.roc21.com/wp-content/uploads/2012/09/fondos-para-pa%CC%81ginas-web-6.jpg');
+    background-repeat: no-repeat; /* Evita la repetición de la imagen */
+    background-size: cover; /* Escala la imagen para cubrir todo el fondo */
+    background-position: center; /* Centra la imagen en el fondo */
 }
